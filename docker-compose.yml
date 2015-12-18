@@ -1,0 +1,16 @@
+web:
+  image: epfl-dojo/php
+  ports:
+    - "8080:80"
+  volumes:
+    - .:/var/www/html
+  links:
+    - db
+db:
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: 1
+  ports: 
+    - 3306:3306
+  image: mysql
+  volumes:
+    - /var/lib/mysql
