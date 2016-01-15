@@ -1,0 +1,26 @@
+# Some notes
+
+## Docker compose
+
+* Installation: https://docs.docker.com/compose/install/
+* Doc: https://docs.docker.com/compose/
+
+
+## Set up
+
+1. Build the php container
+`docker build -t epfl-dojo/php .`
+1. Launch the set of container
+`docker-compose up`
+
+## Debug
+* You can enter the PHP container with 
+`docker exec -it webrad_web_1 bash`
+
+
+## Install
+http://wiki.nubuilder.net/nubuilderv2/tiki-index.php?page=Linux%20Installation
+
+## MySQL
+docker run -it --link some-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+

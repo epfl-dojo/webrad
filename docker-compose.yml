@@ -2,13 +2,15 @@ web:
   image: epfl-dojo/php
   ports:
     - "8080:80"
-  volumes:
-    - .:/var/www/html
+#  volumes:
+#    - .:/var/www/html
   links:
     - db
 db:
   environment:
-    MYSQL_ALLOW_EMPTY_PASSWORD: 1
+#    MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    MYSQL_ROOT_PASSWORD: toor
+    MYSQL_DATABASE: webrad
   ports: 
     - 3306:3306
   image: mysql
