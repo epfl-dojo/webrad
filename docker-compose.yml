@@ -1,3 +1,5 @@
+# run: docker-compose up
+# cleanup: docker-compose rm web db
 web:
   image: epfl-dojo/php
   ports:
